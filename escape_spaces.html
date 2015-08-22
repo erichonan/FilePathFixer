@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Escape spaces</title>
+</head>
+<body>
+	<form id="textInput" onsubmit="return formatMyString()">
+		<input id="textString" type="text">
+		<input type="submit" value="format">
+	</form>
+
+	<div id="result">
+	</div>
+	<script type="text/javascript">
+		function formatMyString()	{
+			// run regexp here
+			var text = document.getElementById("textString").value;
+			var output = document.getElementById("result");
+			var newText = text.replace(/\s/g, '\\ ');
+			output.innerHTML = newText;
+			return false;
+		}
+	</script>
+</body>
+</html>
